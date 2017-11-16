@@ -7,13 +7,17 @@
 
 SRC	=	src/display_list.c	\
 		src/main.c		\
-		src/pushswap.c
+		src/pushswap.c		\
+		src/swap_l.c		\
+		src/swap_p.c		\
+		src/swap_r.c		\
+		src/swap_rr.c		\
 
 OBJ	=	$(SRC:.c=.o)
 
 NAME	=	pushswap
 
-CFLAGS	=	-W -Wall -Wextra -Werror -I./include
+CFLAGS	=	-W -Wall -Wextra -Werror -I./include -g3
 
 all:	$(OBJ)
 	make -C ./lib/my

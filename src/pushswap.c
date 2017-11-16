@@ -15,7 +15,7 @@ void	create_list(linked_list_t *list, char **av, int size)
 
 	list->next = NULL;
 	list->data = (void *)av[1];
-	while (i <= size) {
+	while (i < size) {
 		create_node(list, (void *)av[i]);
 		i++;
 	}
@@ -34,10 +34,6 @@ int	comparaison_string(char *str1, char *str2)
 void	pushswap(char **av, int size)
 {
 	linked_list_t *la = malloc(sizeof(linked_list_t));
-
-	create_list(la, av, size);
-	display_list(la);
-	my_putchar('\n');
-	my_put_nbr(comparaison_string((char *)la->data, (char *)la->next->data));
+	linked_list_t *lb = malloc(sizeof(linked_list_t));
 
 }
