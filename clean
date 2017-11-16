@@ -1,0 +1,8 @@
+rm -f *.o
+rm -f *~
+rm -f *#
+
+rm -f src/*.o
+rm -f src/*~
+rm -f src/*#
+
