@@ -6,11 +6,12 @@
 */
 
 #include "my.h"
+#include "header_PUSHSWAP.h"
 
 int	main(int ac, char **av)
 {
 	if (ac != 1) {
-		pushswap(av);
+		pushswap(av, ac);
 		my_putchar('\n');
 		return (0);
 	}

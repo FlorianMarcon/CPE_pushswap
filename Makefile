@@ -5,11 +5,9 @@
 ##
 ##
 
-SRC	=	src/function_swap.c	\
-		src/pushswap.c		\
-		src/display.c		\
-		src/my_data_in_list.c	\
-		src/main.c
+SRC	=	src/display_list.c	\
+		src/main.c		\
+		src/pushswap.c
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -18,6 +16,7 @@ NAME	=	pushswap
 CFLAGS	=	-W -Wall -Wextra -Werror -I./include
 
 all:	$(OBJ)
+	make -C ./lib/my
 	gcc -o $(NAME) $(OBJ) -L./lib/my -lmy
 
 clean:

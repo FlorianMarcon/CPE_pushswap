@@ -1,0 +1,24 @@
+/*
+** EPITECH PROJECT, 2017
+** my_int_in_list.c
+** File description:
+** mettre les int dans une listes
+*/
+
+#include "my.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+void    create_node(struct linked_list *tmp, void *dat)
+{
+        struct linked_list *new = malloc(sizeof(struct linked_list));
+
+        while(tmp->next != NULL)
+                tmp = tmp->next;
+        tmp->next = new;
+	my_putchar('1');
+        new->data = dat;
+	my_putchar('2');
+        new->next = NULL;
+	my_putchar('3');
+}

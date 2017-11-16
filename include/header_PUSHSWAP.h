@@ -1,45 +1,17 @@
 /*
 ** EPITECH PROJECT, 2017
-** header pushswap.h
+** header
 ** File description:
-**
+** pushswap
 */
+
 #ifndef PUSHSWAP_
 #define PUSHSWAP_
 
-void    display(struct linked_list *tmp);
+void	create_list(linked_list_t *la, char **ac, int size);
 
-list_push_t       *my_data_in_list(char **array, int size);
+void	display_list(struct linked_list *list);
 
-void    pushswap(char **array, int size);
-
-void    swap_list_la(struct linked_list **list1, struct linked_list **list2);
-
-void    swap_list_lb(struct linked_list **list1, struct linked_list **list2);
-
-void    rotate_end_la(struct linked_list **list);
-
-void    rotate_end_lb(struct linked_list **list);
-
-void    rotate_end_lc(struct linked_list **list1, struct linked_list **list2);
-
-void  rotate_la(struct linked_list **list);
-
-void  rotate_lb(struct linked_list **list);
-
-void    rotate_lc(struct linked_list **list1, struct linked_list **list2);
-
-void      swap_la(struct linked_list **list);
-
-void      swap_lb(struct linked_list **list);
-
-void    swap_lc(struct linked_list **list1, struct linked_list **list2);
-
-
-
-
-
-
-
+void	pushswap(char **av, int size);
 
 #endif
