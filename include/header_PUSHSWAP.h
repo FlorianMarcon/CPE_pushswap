@@ -14,6 +14,12 @@ void	display_list(struct linked_list *list);
 
 void	pushswap(char **av, int size);
 
+int	comp_str(char *str1, char *str2);
+
+void    division_list(linked_list_t **lista, linked_list_t **listb);
+
+//void    transfert(linked_list_t **lista, linked_list_t **listb, linked_list_t **listbuff);
+
 void	swap_la(linked_list_t **list);
 
 void	swap_lb(linked_list_t **list);

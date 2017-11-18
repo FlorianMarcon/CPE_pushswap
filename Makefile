@@ -12,6 +12,8 @@ SRC	=	src/display_list.c	\
 		src/swap_p.c		\
 		src/swap_r.c		\
 		src/swap_rr.c		\
+		src/other_function.c	\
+		src/division_list.c	\
 
 OBJ	=	$(SRC:.c=.o)
 
