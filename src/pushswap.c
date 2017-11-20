@@ -16,9 +16,17 @@ void	pushswap(char **av, int size)
 
 	create_list(la, av, size);
 	division_list(&la, &lb);
-	sort_list(&la);
 	my_putstr("\nla ==\n");
 	display_list(la);
 	my_putstr("lb ==\n");
 	display_list(lb);
+	sort_lista(&la);
+	sort_listb(&lb);
+	my_putstr("\nla ==\n");
+	display_list(la);
+	my_putstr("lb ==\n");
+	display_list(lb);
+//	merge(&la, &lb);
+	my_printf("final list == \n");
+	display_list(la);
 }

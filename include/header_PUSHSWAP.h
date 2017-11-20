@@ -42,4 +42,10 @@ void    swap_rrb(linked_list_t **listt);
 
 void    swap_rrr(linked_list_t **lista, linked_list_t **listb);
 
+int	check_list(linked_list_t *list);
+
+void	sort_lista(linked_list_t **lista);
+
+void	sort_listb(linked_list_t **listb);
+
 #endif

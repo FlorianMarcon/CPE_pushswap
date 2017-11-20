@@ -18,4 +18,3 @@ int	main(int ac, char **av)
 	my_putstr("NEED TO ARGUMENTS\n");
 	return (84);
 }
-		
