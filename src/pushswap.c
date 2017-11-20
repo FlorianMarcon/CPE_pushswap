@@ -15,9 +15,11 @@ void	pushswap(char **av, int size)
 	linked_list_t *lb = malloc(sizeof(linked_list_t));
 
 	create_list(la, av, size);
-	division_list(&la, &lb);
-	sort_lista(&la);
-	sort_listb(&lb);
-	merge(&la, &lb);
+	if (check_list(la) != 1) {
+		division_list(&la, &lb);
+		sort_lista(&la);
+		sort_listb(&lb);
+		merge(&la, &lb);
+	}
 	my_putchar('\n');
 }

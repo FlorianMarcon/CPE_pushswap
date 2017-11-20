@@ -12,7 +12,6 @@ int	main(int ac, char **av)
 {
 	if (ac != 1) {
 		pushswap(av, ac);
-		my_putchar('\n');
 		return (0);
 	}
 	my_putstr("NEED TO ARGUMENTS\n");
