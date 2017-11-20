@@ -5,6 +5,8 @@
 ** pushswap
 */
 
+#include "my.h"
+
 #ifndef PUSHSWAP_
 #define PUSHSWAP_
 
@@ -17,8 +19,6 @@ void	pushswap(char **av, int size);
 int	comp_str(char *str1, char *str2);
 
 void    division_list(linked_list_t **lista, linked_list_t **listb);
-
-//void    transfert(linked_list_t **lista, linked_list_t **listb, linked_list_t **listbuff);
 
 void	swap_la(linked_list_t **list);
 
@@ -47,5 +47,7 @@ int	check_list(linked_list_t *list);
 void	sort_lista(linked_list_t **lista);
 
 void	sort_listb(linked_list_t **listb);
+
+void	merge(linked_list_t **lista, linked_list_t **listb);
 
 #endif

@@ -33,9 +33,12 @@ void	sort_lista(linked_list_t **lista)
 			swap_ra(&la);
 		else
 			swap_ra(&la);
+		my_putchar(' ');
 		buff = la->next;
-		if (check_list(buff) == 1)
+		if (check_list(buff) == 1) {
 			swap_ra(&la);
+			my_putchar(' ');
+		}
 	}
 	*lista = la;
 }
@@ -54,9 +57,12 @@ void	sort_listb(linked_list_t **listb)
 			swap_rb(&lb);
 		else
 			swap_rb(&lb);
+		my_putchar(' ');
 		buff = lb->next;
-		if (check_list(buff) == 1)
-			swap_ra(&lb);
+		if (check_list(buff) == 1) {
+			swap_rb(&lb);
+			my_putchar(' ');
+		}
 	}
 	*listb = lb;
 }

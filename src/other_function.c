@@ -16,7 +16,8 @@ void	create_list(linked_list_t *list, char **av, int size)
 	list->next = NULL;
 	list->data = (void *)av[1];
 	while (i < size) {
-		create_node(list, (void *)av[i]);
+		if (i > 2)
+			create_node(list, (void *)av[i]);
 		i++;
 	}
 }

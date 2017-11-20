@@ -15,6 +15,7 @@ SRC	=	src/display_list.c	\
 		src/other_function.c	\
 		src/division_list/division_list.c	\
 		src/sort_list/sort_list.c		\
+		src/merge/merge.c		\
 
 OBJ	=	$(SRC:.c=.o)
 
