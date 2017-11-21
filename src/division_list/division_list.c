@@ -40,6 +40,6 @@ void    division_list(linked_list_t **lista, linked_list_t **listb)
 			*listb = lb;
 		}
 		else
-		la = la->next;
+			la = la->next;
 	}
 }

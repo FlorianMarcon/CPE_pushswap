@@ -19,50 +19,62 @@ int	check_list(linked_list_t *list)
 	return (1);
 }
 
-void	sort_lista(linked_list_t **lista)
+linked_list_t	*search_smaller(linked_list_t *la)
 {
-	linked_list_t *la = *lista;
-	linked_list_t *l_end;
-	linked_list_t *buff = la->next;
+	linked_list_t *buffer;
 
-	while (check_list(la) == 0) {
-		l_end = get_lastnode(la);
-		if (comp_str((char *)la->data, (char *)la->next->data) == 1)
-			swap_la(&la);
-		else if (comp_str((char *)la->data, (char *)l_end->data) == 2)
-			swap_ra(&la);
-		else
-			swap_ra(&la);
-		my_putchar(' ');
-		buff = la->next;
-		if (check_list(buff) == 1) {
-			swap_ra(&la);
-			my_putchar(' ');
-		}
+	buffer = la;
+	la = la->next;
+	while (la != NULL) {
+		if (comp_str((char *)la->data, (char *)buffer->data) == 2)
+			buffer = la;
+		if (comp_str((char *)la->data, (char *)buffer->data) == 0)
+			buffer = la;
+		la = la->next;
 	}
-	*lista = la;
+	return (buffer);
 }
 
-void	sort_listb(linked_list_t **listb)
+void	init_lb(linked_list_t **lista, linked_list_t **listb)
 {
+	linked_list_t *la = *lista;
 	linked_list_t *lb = *listb;
-	linked_list_t *l_end;
-	linked_list_t *buff = lb->next;
+	linked_list_t *buffer;
 
-	while (check_list(lb) == 0) {
-		l_end = get_lastnode(lb);
-		if (comp_str((char *)lb->data, (char *)lb->next->data) == 1)
-			swap_lb(&lb);
-		else if (comp_str((char *)lb->data, (char *)l_end->data) == 2)
-			swap_rb(&lb);
-		else
-			swap_rb(&lb);
+	buffer = search_smaller(la);
+	while (buffer->next != NULL) {
+		swap_rra(&la);
 		my_putchar(' ');
-		buff = lb->next;
-		if (check_list(buff) == 1) {
-			swap_rb(&lb);
-			my_putchar(' ');
-		}
 	}
+	swap_rra(&la);
+	my_putchar(' ');
+	lb = la;
+	la = la->next;
+	lb->next = NULL;
+	*lista = la;
+	*listb = lb;
+}
+
+void	sort_list(linked_list_t **lista, linked_list_t **listb)
+{
+	linked_list_t *la = *lista;
+	linked_list_t *lb = *listb;
+	linked_list_t *buffer = search_smaller (la);
+
+	while (buffer->next != NULL) {
+		swap_rra(&la);
+		my_putchar(' ');
+	}
+	swap_rra(&la);
+	my_putchar(' ');
+	swap_pb(&la, &lb);
+	my_putchar(' ');
+	if (la->next->next != NULL)
+		sort_list(&la, &lb);
+	if (comp_str((char *)la->data, (char *)la->next->data) == 1) {
+		swap_la(&la);
+		my_putchar(' ');
+	}
+	*lista = la;
 	*listb = lb;
 }
