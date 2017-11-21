@@ -31,6 +31,4 @@ void	pushswap(char **av, int size)
 		}
 		merge(&la, &lb);
 	}
-	my_printf("\nlist final== \n");
-	display_list(la);
 }

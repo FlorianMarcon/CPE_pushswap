@@ -24,6 +24,7 @@ NAME	=	pushswap
 CFLAGS	=	-W -Wall -Wextra -Werror -I./include -g3
 
 all:	$(OBJ)
+	make -C ./lib/my
 	gcc -o $(NAME) $(OBJ) -L./lib/my -lmy
 
 clean:
