@@ -33,6 +33,18 @@ clean:
 	rm -f src_printf/*.o
 	rm -f src_printf/*~
 	rm -f src_printf/*#
+	rm -f src_printf/printHexa/*.o
+	rm -f src_printf/printHexa/*~
+	rm -f src_printf/printHexa/*#
+	rm -f src_printf/printInt/*.o
+	rm -f src_printf/printInt/*~
+	rm -f src_printf/printInt/*#
+	rm -f src_printf/printOct/*.o
+	rm -f src_printf/printOct/*~
+	rm -f src_printf/printOct/*#
+	rm -f src_printf/printUnint/*.o
+	rm -f src_printf/printUnint/*~
+	rm -f src_printf/printUnint/*#
 
 fclean: clean
 	rm -f libmy.a

@@ -11,12 +11,15 @@
 
 void	create_list(linked_list_t *list, char **av, int size)
 {
-	int i = 2;
+	int i = 1;
 
+	if (my_strcmp(av[i], "-v") == 0)
+		i++;
 	list->next = NULL;
-	list->data = (void *)av[1];
+	list->data = (void *)av[i];
+	i++;
 	while (i < size) {
-		if (i >= 2)
+		if (i >= 2 && my_strcmp(av[i], "-h") != 0)
 			create_node(list, (void *)av[i]);
 		i++;
 	}

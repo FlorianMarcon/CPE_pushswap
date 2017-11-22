@@ -7,7 +7,7 @@
 #include "my.h"
 #include "header_PUSHSWAP.h"
 
-void	swap_pa(linked_list_t **lista, linked_list_t **listb)
+void	swap_pa(linked_list_t **lista, linked_list_t **listb, int flag)
 {
 	linked_list_t *list_a = *lista;
 	linked_list_t *list_b = *listb;
@@ -20,9 +20,15 @@ void	swap_pa(linked_list_t **lista, linked_list_t **listb)
 	*lista = list_a;
 	*listb = list_b;
 	my_putstr("pa");
+	if (flag == 1) {
+		my_printf("\nList a = ");
+		display_list(*lista);
+		my_printf("\nList b = ");
+		display_list(*listb);
+	}
 }
 
-void	swap_pb(linked_list_t **lista, linked_list_t **listb)
+void	swap_pb(linked_list_t **lista, linked_list_t **listb, int flag)
 {
 	linked_list_t *list_a = *lista;
 	linked_list_t *list_b = *listb;
@@ -35,4 +41,10 @@ void	swap_pb(linked_list_t **lista, linked_list_t **listb)
 	*lista = list_a;
 	*listb = list_b;
 	my_putstr("pb");
+	if (flag == 1) {
+		my_printf("\nList a = ");
+		display_list(*lista);
+		my_printf("\nList b = ");
+		display_list(*listb);
+	}
 }
