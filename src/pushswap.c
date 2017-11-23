@@ -32,16 +32,18 @@ void	pushswap(char **av, int size)
 	int flag = check_flags(size, av);
 
 	create_list(la, av, size);
-	if (check_list(la) != 1) {
-		init_lb(&la, &lb, flag);
-		if (la->next != NULL)
-			sort_list(&la, &lb, flag);
-/*		else {
-			if (comp_str((char*)la->data, (char *)la->next->data) == 1) {
-				swap_la(&la);
+	switch (len_list(la)) {
+		case 2: if (comp_str((char*)la->data, (char *)la->next->data) == 1) {
+				swap_la(&la, flag);
 				my_putchar(' ');
 			}
-		}
-	*/	merge(&la, &lb, flag);
+			break;
+		case 3: sort_third(la, flag);
+			break;
+	}
+	if (check_list(la) != 1) {
+		init_lb(&la, &lb, flag);
+		sort_list(&la, &lb, flag);
+		merge(&la, &lb, flag);
 	}
 }

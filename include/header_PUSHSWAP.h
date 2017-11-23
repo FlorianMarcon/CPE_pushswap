@@ -50,4 +50,10 @@ void	sort_listb(linked_list_t **listb);
 
 void	merge(linked_list_t **lista, linked_list_t **listb, int flag);
 
+void	init_lb(linked_list_t **lista, linked_list_t **listb, int flag);
+
+linked_list_t	*search_smaller(linked_list_t *la);
+
+void	sort_third(linked_list_t *la, int flag);
+
 #endif

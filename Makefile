@@ -13,9 +13,9 @@ SRC	=	src/display_list.c	\
 		src/function_swap/swap_r.c		\
 		src/function_swap/swap_rr.c		\
 		src/other_function.c	\
-		src/division_list/division_list.c	\
 		src/sort_list/sort_list.c		\
 		src/merge/merge.c		\
+#		src/division_list/division_list.c	\
 
 OBJ	=	$(SRC:.c=.o)
 
