@@ -30,7 +30,10 @@ int	check_arguments(int ac, char **av)
 }
 int	main(int ac, char **av)
 {
-	if (check_arguments(ac, av) == 0 && ac > 1) {
+	if (ac == 2) {
+		my_putchar('\n');
+		return (0);
+	} else if (check_arguments(ac, av) == 0 && ac > 1) {
 		pushswap(av, ac);
 		my_putchar('\n');
 		return (0);
