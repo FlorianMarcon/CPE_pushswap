@@ -25,6 +25,19 @@ int	check_flags(int ac, char **av)
 	}
 	return (0);
 }
+
+void	case_2(linked_list_t **lista, int flag)
+{
+	linked_list_t *la = *lista;
+	char *str1 = (char *)la->data;
+	char *str2 = (char *)la->next->data;
+
+	if (comp_str(&str1, &str2) == 1) {
+		swap_la(&la, flag);
+		my_putchar(' ');
+	}
+	*lista = la;
+}
 void	pushswap(char **av, int size)
 {
 	linked_list_t *la = malloc(sizeof(linked_list_t));
@@ -33,10 +46,7 @@ void	pushswap(char **av, int size)
 
 	create_list(la, av, size);
 	switch (len_list(la)) {
-		case 2: if (comp_str((char*)la->data, (char *)la->next->data) == 1) {
-				swap_la(&la, flag);
-				my_putchar(' ');
-			}
+		case 2: case_2(&la, flag);
 			break;
 		case 3: sort_third(la, flag);
 			break;

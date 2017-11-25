@@ -15,6 +15,8 @@ SRC	=	src/display_list.c	\
 		src/other_function.c	\
 		src/sort_list/sort_list.c		\
 		src/merge/merge.c		\
+		src/comparaison/comparaison.c	\
+		src/check_list.c		\
 #		src/division_list/division_list.c	\
 
 OBJ	=	$(SRC:.c=.o)
@@ -28,11 +30,12 @@ all:	$(OBJ)
 	gcc -o $(NAME) $(OBJ) -L./lib/my -lmy
 
 clean:
-		rm -f $(OBJ)
-		rm -f *~
-		rm -f *#
+	rm -f $(OBJ)
+	rm -f *~
+	rm -f *#
 
-fclean:		clean
-		rm -f $(NAME)
+fclean:	clean
+	make fclean -C ./lib/my
+	rm -f $(NAME)
 
 re:	fclean all

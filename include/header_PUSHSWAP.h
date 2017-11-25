@@ -16,7 +16,7 @@ void	display_list(struct linked_list *list);
 
 void	pushswap(char **av, int size);
 
-int	comp_str(char *str1, char *str2);
+int	comp_str(char **str1, char **str2);
 
 void    division_list(linked_list_t **lista, linked_list_t **listb);
 
@@ -55,5 +55,9 @@ void	init_lb(linked_list_t **lista, linked_list_t **listb, int flag);
 linked_list_t	*search_smaller(linked_list_t *la);
 
 void	sort_third(linked_list_t *la, int flag);
+
+void	delete_zero(char **string);
+
+int	check_list(linked_list_t *list);
 
 #endif

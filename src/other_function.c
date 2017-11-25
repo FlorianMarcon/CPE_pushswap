@@ -25,43 +25,35 @@ void	create_list(linked_list_t *list, char **av, int size)
 	}
 }
 
+int	determinate_signe(char *str)
+{
+	if (str[0] == '-')
+		return (-1);
+	else
+		return (1);
+}
+
 void	delete_zero(char **string)
 {
 	int a = 0;
 	char *str = *string;
+	int signe = determinate_signe(str);
 
-	if (my_strlen(str) != 1) {
-		while (str[a] == '0')
+	if (signe == -1) {
+		while (str[a + 1] == '0')
 			a++;
+		str[a] = '-';
 		str = &str[a];
-		if (str[a] == '\0')
-			str = "0";
+	} else {
+		if (my_strlen(str) != 1) {
+			while (str[a] == '0')
+				a++;
+			str = &str[a];
+			if (str[a] == '\0')
+				str = "0";
+			}
 	}
 	*string = str;
-}
-
-int	comp_str(char *str1, char *str2)
-{
-	int i = my_strlen(str1);
-	int a = 0;
-
-	delete_zero(&str1);
-	delete_zero(&str2);
-	if (my_strlen(str1) > my_strlen(str2))
-		return (1);
-	else if (my_strlen(str2) > my_strlen(str1))
-		return (2);
-	else {
-		while (a != i) {
-			if (str1[a] > str2[a])
-				return (1);
-			else if (str2[a] > str1[a])
-				return (2);
-			else
-				a++;
-		}
-		return (0);
-	}
 }
 
 void	display__init_lb(linked_list_t *la, linked_list_t *lb, int flag)

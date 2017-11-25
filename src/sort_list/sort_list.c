@@ -9,26 +9,19 @@
 #include "header_PUSHSWAP.h"
 #include <stdlib.h>
 
-int	check_list(linked_list_t *list)
-{
-	while (list->next != NULL) {
-		if (comp_str((char *)list->data, (char *)list->next->data) == 1)
-			return (0);
-		list = list->next;
-	}
-	return (1);
-}
-
 linked_list_t	*search_smaller(linked_list_t *la)
 {
-	linked_list_t *buffer;
+	linked_list_t *buffer = la;
+	char *str1;
+	char *str2;
 
-	buffer = la;
 	la = la->next;
 	while (la != NULL) {
-		if (comp_str((char *)la->data, (char *)buffer->data) == 2)
+		str1 = (char *)la->data;
+		str2 = (char *)buffer->data;
+		if (comp_str(&str1, &str2) == 2)
 			buffer = la;
-		if (comp_str((char *)la->data, (char *)buffer->data) == 0)
+		if (comp_str(&str1, &str2) == 0)
 			buffer = la;
 		la = la->next;
 	}
@@ -37,8 +30,13 @@ linked_list_t	*search_smaller(linked_list_t *la)
 
 void	sort_third(linked_list_t *la, int flag)
 {
+	char *str1;
+	char *str2;
+
 	while (check_list(la) != 1) {
-		if (comp_str((char *)la->data, (char *)la->next->data) == 1) {
+		str1 = (char *)la->data;
+		str2 = (char *)la->next->data;
+		if (comp_str(&str1, &str2) == 1) {
 			swap_la(&la, flag);
 			if (check_list(la) != 1)
 				my_putchar(' ');
@@ -50,6 +48,18 @@ void	sort_third(linked_list_t *la, int flag)
 	}
 }
 
+void	sort_list_second(linked_list_t **lista, int flag)
+{
+	linked_list_t *la = *lista;
+	char *str1 = (char *)la->data;
+	char *str2 = (char *)la->next->data;
+
+	if (comp_str(&str1, &str2) == 1) {
+		swap_la(&la, flag);
+		my_putchar(' ');
+	}
+	*lista = la;
+}
 void	sort_list(linked_list_t **lista, linked_list_t **listb, int flag)
 {
 	linked_list_t *la = *lista;
@@ -66,10 +76,7 @@ void	sort_list(linked_list_t **lista, linked_list_t **listb, int flag)
 	my_putchar(' ');
 	if (la->next->next != NULL)
 	sort_list(&la, &lb, flag);
-	if (comp_str((char *)la->data, (char *)la->next->data) == 1) {
-		swap_la(&la, flag);
-		my_putchar(' ');
-	}
+	sort_list_second(&la, flag);
 	*lista = la;
 	*listb = lb;
 }
