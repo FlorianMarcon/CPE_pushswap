@@ -17,10 +17,10 @@ int	check_arguments(int ac, char **av)
 		while (av[i][a] != '\0') {
 			if (my_strcmp(av[i], "-v") == 0)
 				break;
-			else if (av[i][a] > '9' || av[i][a] < '0')
-				return (84);
-			else
+			else if ((av[i][a] < '9' && av[i][a] > '0') || av[i][a] == '-')
 				a++;
+			else
+				return (84);
 		}
 		i++;
 		a = 0;
