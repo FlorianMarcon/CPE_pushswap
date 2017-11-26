@@ -21,7 +21,7 @@ SRC	=	src/display_list.c	\
 
 OBJ	=	$(SRC:.c=.o)
 
-NAME	=	pushswap
+NAME	=	push_swap
 
 CFLAGS	=	-W -Wall -Wextra -Werror -I./include -g3
 
