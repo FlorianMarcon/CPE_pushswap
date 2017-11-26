@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_strncmp.c
 ** File description:
-**
+** compare n first charactere to string
 */
 
 #include "my.h"

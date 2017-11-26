@@ -33,10 +33,9 @@ void	swap_lb(linked_list_t **list_l)
 	*list_l = buffer;
 	my_putstr("sb");
 }
-/*
-void	swap_lc(linked_list_t **lista, linked_list_t **listb)
+
+void	swap_lc(linked_list_t **lista, linked_list_t **listb, int flag)
 {
-	swap_la(lista);
+	swap_la(lista, flag);
 	swap_lb(listb);
 }
-*/

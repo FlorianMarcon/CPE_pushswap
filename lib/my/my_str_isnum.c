@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_str_isnum.c
 ** File description:
-**
+** know if str is num
 */
 
 #include <unistd.h>

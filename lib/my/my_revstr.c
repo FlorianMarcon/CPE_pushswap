@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_revstr.c
 ** File description:
-**
+** reverse string
 */
 
 #include <unistd.h>

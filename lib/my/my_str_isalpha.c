@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_str_isalpha.c
 ** File description:
-**
+** know if str is alpha
 */
 
 #include <unistd.h>

@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2017
-** my_strupcase.c
+** my_strlowcase.c
 ** File description:
-**
+** put str in lowcase
 */
 
 #include <unistd.h>

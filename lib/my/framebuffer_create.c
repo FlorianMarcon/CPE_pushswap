@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2017
-** my.h
+** Graphics
 ** File description:
-**
+** framebuffer_create
 */
 
 #include <SFML/Graphics.h>

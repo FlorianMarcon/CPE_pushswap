@@ -75,7 +75,7 @@ void	sort_list(linked_list_t **lista, linked_list_t **listb, int flag)
 	swap_pb(&la, &lb, flag);
 	my_putchar(' ');
 	if (la->next->next != NULL)
-	sort_list(&la, &lb, flag);
+		sort_list(&la, &lb, flag);
 	sort_list_second(&la, flag);
 	*lista = la;
 	*listb = lb;

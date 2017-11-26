@@ -24,7 +24,7 @@ void	swap_la(linked_list_t **list, int flag);
 
 void	swap_lb(linked_list_t **list);
 
-void	swap_lc(linked_list_t **lista, linked_list_t **listb);
+void	swap_lc(linked_list_t **lista, linked_list_t **listb, int flag);
 
 void	swap_pa(linked_list_t **lista, linked_list_t **listb, int flag);
 
@@ -59,5 +59,9 @@ void	sort_third(linked_list_t *la, int flag);
 void	delete_zero(char **string);
 
 int	check_list(linked_list_t *list);
+
+int	comp_negative_str(char *str1, char *str2, int a);
+
+int	comp_negative(char *str1, char *str2);
 
 #endif

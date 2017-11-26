@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_showmem
 ** File description:
-**
+** display memoire
 */
 
 #include "my.h"

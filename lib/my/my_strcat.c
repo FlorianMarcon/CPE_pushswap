@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_strcat.c
 ** File description:
-**
+** i don't know
 */
 
 #include <string.h>

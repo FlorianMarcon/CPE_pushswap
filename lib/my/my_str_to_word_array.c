@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_str_to_word_array.c
 ** File description:
-**
+** put word to str in array
 */
 
 #include <stdlib.h>

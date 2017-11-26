@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_str_islower.c
 ** File description:
-**
+** know if str is lower
 */
 
 #include <unistd.h>

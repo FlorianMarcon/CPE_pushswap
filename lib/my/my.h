@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my.h
 ** File description:
-** 
+** header all function libmy.a
 */
 
 #include <SFML/Graphics.h>
@@ -37,7 +37,7 @@ int	my_compute_power_rec(int nb, int power);		/*mettre un nombre nb a la puissan
 
 int	my_compute_square_root(int nb);			/*obtenir la racine carré d'un nombre seulement si sa racine est un entier*/
 
-int	my_is_prime(int nb);		
+int	my_is_prime(int nb);
 
 int	my_find_prime_sup(int nb);		/*trouver le nombre premier superieur le plus proche de nb*/
 
@@ -68,7 +68,7 @@ int	my_char_isnum(char c);	/*verifie si un char est bien un chiffre*/
 
 int	my_str_isnum(char const *str);		/*verifie que chaque caractere soit des nombres*/
 
-int	my_str_islower(char const *str);		
+int	my_str_islower(char const *str);
 
 int	my_str_isupper(char const *str);
 

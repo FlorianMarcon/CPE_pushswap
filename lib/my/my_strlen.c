@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_strlen.c
 ** File description:
-**
+** return len by string
 */
 
 #include <unistd.h>

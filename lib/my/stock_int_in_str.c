@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** stock_int_in_str
 ** File description:
-**stock_int_in_str
+** stock_int_in_str
 */
 
 #include "my.h"

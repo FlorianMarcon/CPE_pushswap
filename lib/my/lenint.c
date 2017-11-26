@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2017
-** stock_int_in_str
+** bistro
 ** File description:
-**
+** size int
 */
 
 #include "my.h"

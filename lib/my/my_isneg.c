@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_isneg.c
 ** File description:
-**
+** know if number is neg
 */
 
 #include "my.h"

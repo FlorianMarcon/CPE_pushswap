@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_swap.c
 ** File description:
-**swap
+** swap
 */
 
 void	my_swap(int *a,int *b)

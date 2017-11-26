@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_strcpy.c
 ** File description:
-**
+** copy string
 */
 
 #include <unistd.h>

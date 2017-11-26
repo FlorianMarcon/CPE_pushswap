@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_str_is_upper.c
 ** File description:
-**
+** know is str is uppercase
 */
 
 #include <unistd.h>

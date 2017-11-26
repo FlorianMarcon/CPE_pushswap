@@ -4,6 +4,7 @@
 ** File description:
 ** printf
 */
+
 #include "my.h"
 
 int     speci_printInt0(char *str, int nb)

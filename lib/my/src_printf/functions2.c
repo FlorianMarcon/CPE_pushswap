@@ -12,7 +12,7 @@
 
 int	printBinary(va_list tmp, char *str)
 {
-unsigned int unsi = va_arg(tmp, unsigned int);
+	unsigned int unsi = va_arg(tmp, unsigned int);
 	char *string = stock_int_in_str(unsi);
 	int speci = find_speci(str);
 

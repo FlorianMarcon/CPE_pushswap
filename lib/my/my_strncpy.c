@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_strncpy.c
 ** File description:
-**
+** copy n first letter
 */
 
 #include <unistd.h>

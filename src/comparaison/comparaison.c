@@ -9,25 +9,33 @@
 #include <stdlib.h>
 #include "header_PUSHSWAP.h"
 
-int	comp_normale(char *str1, char *str2)
+int	comp_normal_string(char *str1, char *str2, int a)
 {
 	int i = my_strlen(str1);
+
+	while (a != i) {
+		if (str1[a] > str2[a])
+			return (1);
+		else if (str2[a] > str1[a])
+			return (2);
+		else
+				a++;
+	}
+	return (0);
+}
+
+int	comp_normale(char *str1, char *str2)
+{
 	int a = 0;
+	int result;
 
 	if (my_strlen(str1) > my_strlen(str2))
 		return (1);
 	else if (my_strlen(str2) > my_strlen(str1))
 		return (2);
 	else {
-		while (a != i) {
-			if (str1[a] > str2[a])
-				return (1);
-			else if (str2[a] > str1[a])
-				return (2);
-			else
-				a++;
-		}
-		return (0);
+		result = comp_normal_string(str1, str2, a);
+		return (result);
 	}
 }
 
@@ -37,28 +45,6 @@ int	comp_mix(char *str1)
 		return (2);
 	else
 		return (1);
-}
-
-int	comp_negative(char *str1, char *str2)
-{
-	int i = my_strlen(str1);
-	int a = 0;
-
-	if (my_strlen(str1) > my_strlen(str2))
-		return (2);
-	else if (my_strlen(str2) > my_strlen(str1))
-		return (1);
-	else {
-		while (a != i) {
-			if (str1[a] > str2[a])
-				return (2);
-			else if (str2[a] > str1[a])
-				return (1);
-			else
-				a++;
-		}
-		return (0);
-	}
 }
 
 int	comp_str(char **string1, char **string2)

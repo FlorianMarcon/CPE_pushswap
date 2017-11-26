@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_strcmp.c
 ** File description:
-**
+** compare two string
 */
 
 #include "my.h"

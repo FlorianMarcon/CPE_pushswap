@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_is_prime.c
 ** File description:
-**
+** know if number is prime
 */
 
 #include "my.h"

@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2017
-** my.h
+** Graphics
 ** File description:
-**
+** modify pixels
 */
 
 #include <SFML/Graphics.h>

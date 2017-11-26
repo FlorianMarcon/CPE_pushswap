@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_showstr.c
 ** File description:
-**
+** i don't know
 */
 
 #include "my.h"
@@ -31,7 +31,7 @@ int	my_showstr(char const *str)
 				nb = (nb - (nb % 16)) / 16;
 			}
 			my_putchar('\\');
-			if(my_strlen(arr) == 1)
+			if (my_strlen(arr) == 1)
 				my_putchar('0');
 			my_revstr(arr);
 			my_putstr(my_strlowcase(arr));

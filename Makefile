@@ -8,16 +8,16 @@
 SRC	=	src/display_list.c	\
 		src/main.c		\
 		src/pushswap.c		\
-		src/function_swap/swap_l.c		\
-		src/function_swap/swap_p.c		\
-		src/function_swap/swap_r.c		\
-		src/function_swap/swap_rr.c		\
-		src/other_function.c	\
+		src/function_swap/swap_start_list.c		\
+		src/function_swap/swap_between_list.c		\
+		src/function_swap/swap_rotate.c		\
+		src/function_swap/swap_rotate_inverse.c		\
+		src/necessary_function.c	\
 		src/sort_list/sort_list.c		\
 		src/merge/merge.c		\
 		src/comparaison/comparaison.c	\
+		src/comparaison/comparaison_negative_string.c	\
 		src/check_list.c		\
-#		src/division_list/division_list.c	\
 
 OBJ	=	$(SRC:.c=.o)
 
