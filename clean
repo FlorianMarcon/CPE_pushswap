@@ -1,0 +1,22 @@
+#! /bin/bash
+
+rm -f *.o
+rm -f *~
+rm -f *#
+
+rm -f src/*.o
+rm -f src/*~
+rm -f src/*#
+
+rm -f src/function_swap/*.o
+rm -f src/sort_list/*.o
+rm -f src/division_list/*.o
+rm -f src/merge/*.o
+rm -f src/function_swap/*#
+rm -f src/sort_list/*#
+rm -f src/merge/*#
+rm -f src/division_list/*#
+rm -f src/function_swap/*~
+rm -f src/sort_list/*~
+rm -f src/merge/*~
+rm -f src/division_list/*~
